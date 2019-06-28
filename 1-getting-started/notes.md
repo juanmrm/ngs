@@ -9,6 +9,10 @@
 - Tab key and Tab + Tab key to see all available methods, keywords...
 - _ variable stores the latest value we've printed
 
+Start a live session with "node".
+
+To see all options use "node -h | less": see env variables that we can pass, debug options etc... 
+
 ## require keyword
 
 Use to manage the dependencies. Use it to require a library (built-in module or third-party)
@@ -23,3 +27,12 @@ NodeJS has an API with this functions very close to what we see in browser (mayb
 - clearTimeout(id): cancel the timer
 - clearInterval(id): cancel an interval
 - clearImmediate(id): cancel the timer
+
+## process object
+
+- Handy bridge between node and os, we can use it to pass to node dinamic configuration and more things:
+  
+  - process.env.VAR_NAME
+  - process.argv: first item is the name of the command, second the name of the script, and third are the arguments we pass
+  - process.exit: manually terminate the process
+
