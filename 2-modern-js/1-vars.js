@@ -1,5 +1,8 @@
 {
   // Block Scope
+  {
+    // Nested Block Scope
+  }
 }
 
 if (true) {

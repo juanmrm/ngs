@@ -12,5 +12,5 @@ const { temp1, temp2, ...person } = data;
 const newArray = [...restOfItems];
 
 const newObject = {
-  ...person,
+  ...person, // Shallow copies for the nested objects (shared references)
 };

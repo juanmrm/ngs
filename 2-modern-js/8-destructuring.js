@@ -5,17 +5,27 @@
 const { PI, E, SQRT2 }  = Math;
 
 // With require
-// const { readFile } = require('fs');
+const { readFile } = require('fs');
 
 
-// const circle = {
-//   label: 'circleX',
-//   radius: 2,
-// };
-//
-// const circleArea = ({ radius }) =>
-//   (PI * radius * radius).toFixed(2);
-//
-// console.log(
-//   circleArea(circle)
-// );
+const circle = {
+  label: 'circleX',
+  radius: 2,
+};
+
+const circleArea = ({ radius }, { precision = 2 } = {}) => // Second argument is optional and default value for precision is 2
+  (PI * radius * radius).toFixed(precision);
+
+console.log(
+  circleArea(circle)
+);
+
+console.log(
+  circleArea(circle, { precision: 5})
+);
+
+const [first, second, , forth] = [10, 20, 30, 40];
+
+
+
+
