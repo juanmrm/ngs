@@ -1,6 +1,6 @@
 # NPM
 
-Package manager
+It's just one Package manager, there other for example Yarn.
 
 Anyone can publish dependencies, and there is no quality control, so no guarantee it will work as expected (trust developers promises)
 
@@ -35,6 +35,15 @@ Using x notation:
  A.B.x : any version patch can be install
  A.x: any minor and patch version can be install
 
+## Install and uninstall dependencies
+
+Install a production dependency: "npm i DEP_NAME"
+Install a development dependency: "npm i -D DEP_NAME"
+Uninstall dependency: "npm uninstall DEP_NAME"
+
+Ex. npm i lodash@latest
+    npm i lodash@4.0.1
+
 ## Publish a package
 
 1 - Create a package.json file with "npm init"
@@ -53,3 +62,21 @@ Using x notation:
   
   Ex. "npx eslint server.js"
 
+## List dependency tree
+
+"npm ls"
+
+## Display info about a package
+
+ "npm show request"
+ "npm show request versions"
+
+## Show outdated libraries
+
+  "npm outdated"
+
+## Update dependencies
+
+"npm update"
+
+Important to note that this command changes del tilde character ~ for ^
