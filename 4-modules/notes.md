@@ -2,7 +2,7 @@
 
 A module is a file or a folder containing code files
 
-## What will this log on top level of a node file ?
+## What will this log on top level of a node file?
 
   console.log(arguments);
 
@@ -29,3 +29,21 @@ Also this wrapping function will return by default:
   Inspect what global has inside:
     "console.log(global);
     "console.dir(global, { depth: 0 });" // Because global is a big object, we're only printing her root level.
+
+## The Event Loop
+
+Is what Node uses to process asynchronous actions and interface them for you so that you don't have to deal with threads. It's an infinite loop.
+
+Every node process starts this infinite loop and will continue running it while there are asynchronous operations pending. If there are not, it will exit and the OS will terminate the process.
+
+## Event Emitter
+
+This built-in library is core concept of the Node framework
+
+const EventEmitter = require('events');
+
+myEmmiter.on('TEST_EVENT', () => {
+  console.log('TEST_EVENT was fired');
+});
+
+myEmmiter.emit('TEST_EVENT');
